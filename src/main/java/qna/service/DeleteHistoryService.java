@@ -23,4 +23,8 @@ public class DeleteHistoryService {
     public void save(DeleteHistory deleteHistory) {
         deleteHistoryRepository.save(deleteHistory);
     }
+
+    public List<DeleteHistory> findAll() {
+        return deleteHistoryRepository.findAll();
+    }
 }
