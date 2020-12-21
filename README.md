@@ -174,6 +174,7 @@ public class QnAService {
 - Frame#number 는 프레임을 만들 때 마지막 프레임인지 판단하기 위해 존재. 이럴바엔 호출하는 쪽에서 판단했어도..
   - 더불어 이렇게 구현했다면 Frame 의 인스턴스 변수도 두개 이하로 만들 수 있었겠다
 - 상태를 리턴하는 Frame#getScore, Frame#getScoring, Frame#getFrameStatus 는 인터페이스를 분리할수도 있겠다.
+- Frame#getBallThrows 는 List 를 반환하는데 외부에 공개된 인터페이스에서 내부 제약을 논리적으로 의존하고 있어야 하는 한계가 있다. (두개 또는 세개만 있을 수 있음) 인덱스를 숫자로 하지 말고 enum 으로 표현한다던지 하는쪽으로 개선해볼 수 있겠다.
 
 ## 4단계 - 볼링 점수판(n명)
 프로그램 실행 결과
