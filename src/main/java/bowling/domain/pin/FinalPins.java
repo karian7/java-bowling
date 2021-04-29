@@ -4,7 +4,7 @@ import bowling.domain.frame.FrameStatus;
 
 import java.util.Objects;
 
-public final class FinalPins implements Pins {
+public final class FinalPins implements Pins<FinalPins> {
 
     private final NormalPins pins;
     private final Pin thirdPin;
@@ -46,7 +46,7 @@ public final class FinalPins implements Pins {
     }
 
     @Override
-    public Pins knockDownPin(Pin pin) {
+    public FinalPins knockDownPin(Pin pin) {
         if (firstPin() == null) {
             return new FinalPins(pin);
         }

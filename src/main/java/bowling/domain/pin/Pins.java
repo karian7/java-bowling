@@ -2,7 +2,7 @@ package bowling.domain.pin;
 
 import bowling.domain.frame.FrameStatus;
 
-public interface Pins {
+public interface Pins<T extends Pins<?>> {
 
     Pin firstPin();
 
@@ -10,5 +10,5 @@ public interface Pins {
 
     FrameStatus frameStatus();
 
-    Pins knockDownPin(Pin pin);
+    T knockDownPin(Pin pin);
 }
