@@ -2,7 +2,6 @@ package bowling.domain.frame;
 
 import bowling.domain.pin.NormalPins;
 import bowling.domain.pin.Pin;
-import bowling.domain.pin.Pins;
 import bowling.exception.IllegalNormalFrameException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -96,7 +95,7 @@ class NormalFrameTest {
         // given
         final Pin firstPin = new Pin(firstPinCount);
         final Pin secondPin = new Pin(secondPinCount);
-        final Pins pins = new NormalPins(firstPin, secondPin);
+        final NormalPins pins = new NormalPins(firstPin, secondPin);
         final Frame frame = NormalFrame.of(RoundNumber.firstRoundNumber(), new NormalFrameScore(pins));
 
         // when
